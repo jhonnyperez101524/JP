@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página Ultra Mamalona PRO+</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --main-color: #ff2e63;
+      --dark-bg: #1a1a2e;
+      --light-bg: #16213e;
+      --accent-color: #08d9d6;
+      --text-light: #eee;
+      --text-muted: #bbb;
+      --shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1532581140115-3e355d8a5c9d') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    header h1 {
+      font-size: 4em;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--main-color);
+      text-shadow: 0 0 20px var(--main-color);
+      animation: fadeIn 2s ease-out;
+    }
+
+    nav {
+      background: var(--light-bg);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--main-color);
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.8em;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .service-box {
+      background: #0f3460;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      width: 270px;
+      transition: transform 0.3s;
+    }
+
+    .service-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-box i {
+      font-size: 2.5em;
+      color: var(--main-color);
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #0d1b2a;
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+    }
+
+    .floating-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--main-color);
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 1.1em;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      animation: pulse 2s infinite;
+      transition: background 0.3s;
+    }
+
+    .floating-btn:hover {
+      background: #e6004c;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+        padding: 0 10px;
+      }
+
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚀 Ultra Mamalona PRO+</h1>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#que-hacemos">Lo que hacemos</a>
+    <a href="#marketing">Marketing Digital</a>
+    <a href="#branding">Diseño y Branding</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="que-hacemos">
+    <h2>💼 Lo que hacemos</h2>
+    <p>Transformamos ideas en experiencias digitales que impactan. Nuestro equipo combina creatividad, estrategia y tecnología para ayudarte a destacar en el mundo online.</p>
+  </section>
+
+  <section id="marketing">
+    <h2>📈 Marketing Digital</h2>
+    <p>Impulsamos tu marca con estrategias digitales inteligentes, orientadas a resultados medibles y crecimiento real.</p>
+    <div class="services">
+      <div class="service-box">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Publicidad Online</h3>
+        <p>Campañas efectivas en redes sociales, Google Ads y más.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-search"></i>
+        <h3>SEO & SEM</h3>
+        <p>Posicionamiento orgánico y pagado para que te encuentren primero.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-envelope-open-text"></i>
+        <h3>Email Marketing</h3>
+        <p>Automatización y contenido que convierte suscriptores en clientes.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-thumbs-up"></i>
+        <h3>Gestión de Redes</h3>
+        <p>Presencia constante, contenido creativo y comunidad activa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="branding">
+    <h2>🎨 Diseño y Branding</h2>
+    <p>Construimos marcas memorables que conectan con su público a nivel visual y emocional.</p>
+    <div class="services">
+      <div class="service-box">
+        <i class="fas fa-pen-nib"></i>
+        <h3>Identidad Visual</h3>
+        <p>Diseño de logotipos, paletas de color y guías de marca únicas.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-palette"></i>
+        <h3>Diseño Gráfico</h3>
+        <p>Desde flyers hasta banners web, todo con calidad profesional.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-video"></i>
+        <h3>Contenido Multimedia</h3>
+        <p>Animaciones, reels, videos y piezas interactivas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>📬 Contáctanos</h2>
+    <p>Escríbenos a <strong>contacto@ultramamalona.com</strong> o síguenos en redes sociales para una experiencia digital 🔥. También puedes hacer clic en el botón flotante de abajo.</p>
+  </section>
+
+  <footer>
+    © 2025 Ultra Mamalona | Todos los derechos reservados.
+  </footer>
+
+  <button class="floating-btn" onclick="alert('¡Gracias por visitarnos! Te responderemos pronto. 📨')">Contáctanos</button>
+
+</body>
+</html>
